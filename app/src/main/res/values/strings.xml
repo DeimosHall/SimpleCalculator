@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleCalculator</string>
+    <string name="number_1">Number 1</string>
+    <string name="number_2">Number 2</string>
+
+    <string name="plus_symbol">+</string>
+    <string name="minus_symbol">-</string>
+    <string name="multiply_symbol">×</string>
+    <string name="divide_symbol">÷</string>
+    <string name="equal_symbol">=</string>
+    <string name="result">Result:</string>
+</resources>
