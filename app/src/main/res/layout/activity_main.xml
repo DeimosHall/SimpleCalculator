@@ -12,14 +12,16 @@
         android:id="@+id/et_number_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/number_1" />
+        android:hint="@string/number_1"
+        android:inputType="numberDecimal" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_number_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="@string/number_2" />
+        android:hint="@string/number_2"
+        android:inputType="numberDecimal" />
 
     <LinearLayout
         android:layout_marginTop="15dp"
@@ -27,42 +29,58 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_add"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plus_symbol"
+            android:textColor="@color/white"
             android:layout_weight="1" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_subtract"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/minus_symbol"
+            android:textColor="@color/white"
             android:layout_weight="1" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_multiply"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/multiply_symbol"
+            android:textColor="@color/white"
             android:layout_weight="1" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_divide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/divide_symbol"
+            android:textColor="@color/white"
             android:layout_weight="1" />
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_equal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/equal_symbol" />
+        android:text="@string/equal_symbol"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_clear"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textAllCaps="true" />
 
     <TextView
         android:id="@+id/tv_result"

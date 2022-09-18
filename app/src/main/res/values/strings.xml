@@ -3,10 +3,18 @@
     <string name="number_1">Number 1</string>
     <string name="number_2">Number 2</string>
 
+    <!-- Main activity -->
     <string name="plus_symbol">+</string>
     <string name="minus_symbol">-</string>
     <string name="multiply_symbol">×</string>
     <string name="divide_symbol">÷</string>
     <string name="equal_symbol">=</string>
+    <string name="btn_clear">Clear</string>
     <string name="result">Result:</string>
+
+    <!-- Errors -->
+    <string name="missing_number1">Enter number 1</string>
+    <string name="missing_number2">Enter number 2</string>
+    <string name="undefined">UNDEFINED</string>
+    <string name="divided_by_zero">Can\'t divide by zero</string>
 </resources>
