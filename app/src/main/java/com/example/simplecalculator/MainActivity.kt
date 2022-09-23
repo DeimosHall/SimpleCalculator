@@ -1,25 +1,18 @@
 package com.example.simplecalculator
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.content.res.Configuration
-import android.graphics.Color
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextThemeWrapper
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
 
-    var operation: String? = null
+    private var operation: String? = null
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -80,10 +73,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        btnClear.setOnClickListener {
+            etNumber1.setText("")
+            etNumber2.setText("")
+            etNumber1.requestFocus()
+            tvResult.text = getString(R.string.result)
+        }
     }
 
-    @SuppressLint("NewApi")
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun highlight(btnAdd: Button, btnSubtract: Button, btnMultiply: Button, btnDivide: Button) {
         Log.d("check", "Darkmode: ${isDarkThemeOn()}")
 
@@ -117,9 +115,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.R)
-    fun isDarkThemeOn(): Boolean {
-        return resources.configuration.isNightModeActive
+    private fun isDarkThemeOn(): Boolean {
+        // uiMode = 33 for dark mode on and uiMode = 17 for light mode on
+        return when (resources.configuration.uiMode) {
+            33 -> true
+            else -> false
+        }
     }
 
     private fun getNumbers(context: Context, number1: EditText, number2: EditText): Pair<Double?, Double?> {
